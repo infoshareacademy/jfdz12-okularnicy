@@ -1,0 +1,19 @@
+Funkcjonalnoœæ 
+Tworzenie listy do pakowania.
+Nazwa podrózy
+Daty
+p³eæ
+Œrodek transportu 
+
+cel 
+-Transfer do PDF :D Mo¿esz sobie wydrukowaæ i odhaczaæ rêcznie.
+-Lista rzeczy do zrobienia przed wyjazdem. 
+- To do w trakcie top lista 
+- Zamaist checklisty to tinder 
+-Jedzenie regionalne 
+
+
+* Logowanie do apki
+* Spis dokumentów 
+* kalendarz 
+* pogoda
