@@ -1,0 +1,145 @@
+/* ----------------------------------------------- */
+/* Orange color: #e67e22 */
+/* ----------------------------------------------- */
+
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ----- HEADINGS ----- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Kamil */
+
+
+/* Adam */
+
+
+/* Kuba */
+
+
+/* Helena */
+
+.main-functions-header {
+    padding-bottom: 50px;
+}
+.mainFunctions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas:    "list-icon preparation-icon cloud-icon chcek-icon"
+    "list-description preparation-description cloud-description check-description";
+    justify-items: center;
+    grid-column-gap: 5%;
+}
+
+.icon {
+    font-size: 45px;
+    
+}
+
+.list-icon {
+    grid-area: list-icon;
+   
+}
+.preparation-icon {
+    grid-area: preparation-icon;
+    
+}
+.cloud-icon {
+    grid-area: cloud-icon;
+}
+.chcek-icon {
+    grid-area: cloud-icon;
+}
+.list-description {
+    grid-area: list-description;
+}
+.preparation-description {
+    grid-area: preparation-description;
+}
+.cloud-description {
+    grid-area: cloud-description;
+}
+.check-description {
+    grid-area: check-description;
+}
+
+.list-description, .preparation-description, .cloud-description, .check-description {
+    text-align: center;
+}
