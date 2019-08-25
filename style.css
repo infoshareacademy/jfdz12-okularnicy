@@ -92,5 +92,55 @@ h2:after {
 
 /* Kuba */
 
-
 /* Helena */
+
+.main-functions-header {
+    padding-bottom: 50px;
+}
+.mainFunctions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas:    "list-icon preparation-icon cloud-icon chcek-icon"
+    "list-description preparation-description cloud-description check-description";
+    justify-items: center;
+    grid-column-gap: 5%;
+}
+
+.icon {
+    font-size: 45px;
+    color: #e67e22;
+    
+}
+
+.list-icon {
+    grid-area: list-icon;
+   
+}
+.preparation-icon {
+    grid-area: preparation-icon;
+    
+}
+.cloud-icon {
+    grid-area: cloud-icon;
+}
+.chcek-icon {
+    grid-area: cloud-icon;
+}
+.list-description {
+    grid-area: list-description;
+}
+.preparation-description {
+    grid-area: preparation-description;
+}
+.cloud-description {
+    grid-area: cloud-description;
+}
+.check-description {
+    grid-area: check-description;
+}
+
+.list-description, .preparation-description, .cloud-description, .check-description {
+    text-align: center;
+}
+
