@@ -1,12 +1,12 @@
-Funkcjonalnoœæ 
+FunkcjonalnoÅ›Ä‡ 
 Tworzenie listy do pakowania.
-Nazwa podrózy
+Nazwa podrÃ³zy
 Daty
-p³eæ
-Œrodek transportu 
+pÅ‚eÄ‡
+Åšrodek transportu 
 
 cel 
--Transfer do PDF :D Mo¿esz sobie wydrukowaæ i odhaczaæ rêcznie.
+-Transfer do PDF :D MoÅ¼esz sobie wydrukowaÄ‡ i odhaczaÄ‡ rÄ™cznie.
 -Lista rzeczy do zrobienia przed wyjazdem. 
 - To do w trakcie top lista 
 - Zamaist checklisty to tinder 
@@ -14,7 +14,7 @@ cel
 
 
 * Logowanie do apki
-* Spis dokumentów 
+* Spis dokumentÃ³w 
 * kalendarz 
 * pogoda
 
@@ -25,3 +25,4 @@ preparation
 Set time and weather
 
 quick check
+* pogoda
