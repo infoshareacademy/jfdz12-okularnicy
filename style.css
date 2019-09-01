@@ -90,6 +90,10 @@ h2:after {
 
 /* Adam */
 
+.navbar-fixed-top.scrolled {
+    background-color: #e67e22 !important;
+    transition: background-color 200ms linear;
+  }
 
 /* Kuba */
 
