@@ -96,6 +96,27 @@ h2:after {
     transition: background-color 200ms linear;
   }
 
+  .hero {
+    height: 100vh;
+    background-image: url("images/Hero2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .hero-text h1 {
+      font-weight: 900;
+  }
 /* Kuba */
 
 /* Helena */
