@@ -117,15 +117,14 @@ h2:after {
     border: none;
   }
   
-  .container {
+  .container-sign {
     display: block;
     border-radius: 5px;
     background-color: #fff;
     padding: 20px;
     width: 80%;
-    margin-top: 5%;
-    margin-bottom: 5%;
     color: #e67e22;
+    margin: 5% auto 5% auto;
   }
 
   .btn-sub {
