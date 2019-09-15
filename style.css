@@ -87,6 +87,60 @@ h2:after {
 }
 
 /* Kamil */
+/* Form */
+
+.e-mall, .first-name {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 6px auto 16px auto;
+    resize: vertical;
+  }
+  
+  .submit-btn,
+  .submit-btn:visited {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .submit-btn:hover,
+  .submit-btn:active {
+    background-color: #bf6516;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .container {
+    display: block;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #e67e22;
+  }
+
+  .btn-sub {
+      display: block;
+      text-align: center;
+  }
+
+  .sign-text {
+      display: block;
+      text-align: center;
+  }
+
+  .sign-up {
+      background-color: #f2f2f2;
+  }
 
 
 /* Adam */
