@@ -1,11 +1,13 @@
 /* ----------------------------------------------- */
+
 /* Orange color: #e67e22 */
-/* ----------------------------------------------- */
-
-
 
 /* ----------------------------------------------- */
+
+/* ----------------------------------------------- */
+
 /* BASIC SETUP */
+
 /* ----------------------------------------------- */
 
 * {
@@ -14,8 +16,7 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -23,16 +24,18 @@ body {
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-
 /* ----------------------------------------------- */
+
 /* REUSABLE COMPONENTS */
-/* ----------------------------------------------- */
 
+/* ----------------------------------------------- */
 
 .ourrow {
     max-width: 1140px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -45,9 +48,8 @@ section {
 }
 
 /* ----- HEADINGS ----- */
-h1,
-h2,
-h3 {
+
+h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -83,47 +85,99 @@ h2:after {
     margin: 0 auto;
     margin-top: 30px;
 }
-
 /* Kamil */
+/* Form */
 
+.e-mall, .first-name {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 6px auto 16px auto;
+    resize: vertical;
+  }
+  
+  .submit-btn,
+  .submit-btn:visited {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .submit-btn:hover,
+  .submit-btn:active {
+    background-color: #bf6516;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .container-sign {
+    display: block;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    color: #e67e22;
+    margin: 5% auto 5% auto;
+  }
+
+  .btn-sub {
+      display: block;
+      text-align: center;
+  }
+
+  .sign-text {
+      display: block;
+      text-align: center;
+  }
+
+  .sign-up {
+      background-color: #f2f2f2;
+  }
 
 /* Adam */
 
+.navbar-fixed-top.scrolled {
+    background-color: #e67e22 !important;
+    transition: background-color 200ms linear;
+}
+
+@media (max-width: 768px) {
+    nav.navbar {
+        background-color: #e67e22 !important;
+    }
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("images/Hero2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text p {
+    text-shadow: 1px 1px 2px #f77030;
+    font-weight: 500;
+}
 
 /* Kuba */
 
-/*
-.btn-primary.btn-primary { 
-    background-color: #e67e22;
-    width: 320px;
-    height: 147px;
-    border-color: #eb9950;
-}
-
-.btn-primary.btn-primary:hover  {
-    background-color: #bf6516;
-    border-color: #e67e22;
-
-}
-
-.btn-primary.btn-primary:visited  {
-    background-color: #bf6516;
-    border-color: #e67e22;
-    
-}
-
-.btn-primary.btn-primary:active {
-    background-color: #915b2d;
-    border-color: #e67e22;
-    
-}
-
-.btn-primary.btn-primary:link {
-    background-color: #bf6516;
-    border-color: #e67e22;
-    
-}
-*/
 .team-title {
     padding-bottom: 50px;
 }
@@ -132,7 +186,7 @@ h2:after {
     background-color: #e67e22;
     color: white;
     padding: 12px 12px;
-    width: 275px;
+    width: 270px;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -168,5 +222,59 @@ text-align: justify;
 .tean-buttons {
     display: flex;
     justify-content: space-between;
+}
+/* Helena */
 
+.main-functions-header {
+    padding-bottom: 50px;
+}
+
+.mainFunctions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas: "list-icon preparation-icon cloud-icon chcek-icon" "list-description preparation-description cloud-description check-description";
+    justify-items: center;
+    grid-column-gap: 5%;
+}
+
+.icon {
+    font-size: 45px;
+    color: #e67e22;
+}
+
+.list-icon {
+    grid-area: list-icon;
+}
+
+.preparation-icon {
+    grid-area: preparation-icon;
+}
+
+.cloud-icon {
+    grid-area: cloud-icon;
+}
+
+.chcek-icon {
+    grid-area: cloud-icon;
+}
+
+.list-description {
+    grid-area: list-description;
+}
+
+.preparation-description {
+    grid-area: preparation-description;
+}
+
+.cloud-description {
+    grid-area: cloud-description;
+}
+
+.check-description {
+    grid-area: check-description;
+}
+
+.list-description, .preparation-description, .cloud-description, .check-description {
+    text-align: center;
 }
