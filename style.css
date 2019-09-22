@@ -86,6 +86,7 @@ h2:after {
     margin-top: 30px;
 }
 /* Kamil */
+
 /* Form */
 
 .e-mall, .first-name {
@@ -140,6 +141,14 @@ h2:after {
       background-color: #f2f2f2;
   }
 
+
+  .check_box a {
+      color: #555;
+  }
+
+.check-box {
+    margin: 5px 10px 10px 15px;
+}
 /* Adam */
 
 .navbar-fixed-top.scrolled {
