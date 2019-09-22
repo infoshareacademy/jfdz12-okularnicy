@@ -61,14 +61,8 @@
 .icon-doc:before { content: '\e803'; } /* '' */
 .icon-print:before { content: '\e804'; } /* '' */
 .icon-fuel:before { content: '\e819'; } /* '' */
-<<<<<<< HEAD
 .icon-github-circled:before { content: '\f09b'; color: black; font-size: 50px;} /* '' */
 .icon-money:before { content: '\f0d6'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; font-size: 40px;  } /* '' */
-=======
-.icon-github-circled:before { content: '\f09b'; } /* '' */
-.icon-money:before { content: '\f0d6'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
->>>>>>> 5fab3fa4ce236a885a7b381266988e3c8ed4ba0f
 .icon-user-md:before { content: '\f0f0'; } /* '' */
 .icon-shopping-bag:before { content: '\f290'; } /* '' */
