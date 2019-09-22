@@ -31,7 +31,7 @@ body {
 /* ----------------------------------------------- */
 
 
-.row {
+.ourrow {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -92,5 +92,81 @@ h2:after {
 
 /* Kuba */
 
+/*
+.btn-primary.btn-primary { 
+    background-color: #e67e22;
+    width: 320px;
+    height: 147px;
+    border-color: #eb9950;
+}
 
-/* Helena */
+.btn-primary.btn-primary:hover  {
+    background-color: #bf6516;
+    border-color: #e67e22;
+
+}
+
+.btn-primary.btn-primary:visited  {
+    background-color: #bf6516;
+    border-color: #e67e22;
+    
+}
+
+.btn-primary.btn-primary:active {
+    background-color: #915b2d;
+    border-color: #e67e22;
+    
+}
+
+.btn-primary.btn-primary:link {
+    background-color: #bf6516;
+    border-color: #e67e22;
+    
+}
+*/
+.team-title {
+    padding-bottom: 50px;
+}
+
+.team-btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 12px;
+    width: 275px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+.team-btn:hover  {
+    background-color: #bf6516;
+ }
+
+
+.team {
+    text-align: center;
+}
+
+.fotobutton {
+    max-width: 75px;
+}
+
+.modal-links{
+text-align: center;
+}
+
+.modal-text{
+text-align: justify;
+}
+
+.tean-buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
