@@ -287,3 +287,42 @@ text-align: justify;
 .list-description, .preparation-description, .cloud-description, .check-description {
     text-align: center;
 }
+
+.cookie {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+    background-color: rgb(204,204,204, 0.5);
+    display: none;
+    border: #e67e22 solid 2px;
+    border-radius: 15px;
+    padding: 25px;
+    width: 400px;
+}
+
+@media (max-width: 450px) {
+    .cookie {
+        width: 90%;
+    }
+ }
+
+
+.cookie-btn,
+.cookie-btn:visited {
+  background-color: #e67e22;
+  color: white;
+  width: 70px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.cookie-btn:hover,
+.cookie-btn:active {
+  background-color: #bf6516;
+  border-radius: 4px;
+  border: none;
+}
