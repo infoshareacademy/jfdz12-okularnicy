@@ -203,6 +203,10 @@ h2:after {
     
 }
 
+body.modal-open {
+    padding-right: 0px !important; 
+}
+
 button:focus {
     outline: 0 !important;
 }
@@ -228,7 +232,7 @@ text-align: center;
 text-align: justify;
 }
 
-.tean-buttons {
+.team-buttons {
     display: flex;
     justify-content: space-between;
 }
