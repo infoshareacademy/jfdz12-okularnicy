@@ -195,11 +195,11 @@ h2:after {
     background-color: #e67e22;
     color: white;
     padding: 12px 12px;
-    width: 270px;
+    width: 260px;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    margin: 5px 0;
+    margin: 5px 5px;
     
 }
 
