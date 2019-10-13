@@ -222,14 +222,15 @@ button:focus {
 
 .fotobutton {
     max-width: 75px;
+   border-radius: 38px;    
 }
 
 .modal-links{
-text-align: center;
+    text-align: center;
 }
 
 .modal-text{
-text-align: justify;
+    text-align: justify;
 }
 
 .team-buttons {
