@@ -203,6 +203,10 @@ h2:after {
     
 }
 
+body.modal-open {
+    padding-right: 0px !important; 
+}
+
 button:focus {
     outline: 0 !important;
 }
@@ -228,7 +232,7 @@ text-align: center;
 text-align: justify;
 }
 
-.tean-buttons {
+.team-buttons {
     display: flex;
     justify-content: space-between;
 }
@@ -325,4 +329,13 @@ text-align: justify;
   background-color: #bf6516;
   border-radius: 4px;
   border: none;
+}
+
+.footer {
+    background-color: #e67e22;
+    color: wheat;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
 }
