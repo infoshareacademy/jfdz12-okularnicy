@@ -22,37 +22,24 @@ addEventListener("keydown", function (event) {
 
 const fire = document.querySelector('.game-window_fire');
 let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-let first_alpha = 'a';
 
 function movingFire(arrayy) {
-    
-setTimeout(function() {
-    fire.style.gridArea = `${arrayy[1]}3`;
+    let x = 0;
+    let move = setInterval(function() {
+        x++;
+        fire.style.gridArea = `${arrayy[x]}3`;
+        if (x > 7){
+            fire.style.display = "none";
+            console.log("hello");
+            clearInterval(move);
+            
+        }
         }, 1000);
+    }  
 
-setTimeout(function() {
-    fire.style.gridArea = `${arrayy[2]}3`;
-        }, 2000);
-
-        setTimeout(function() {
-            fire.style.gridArea = `${arrayy[3]}3`;
-                }, 3000);
-                setTimeout(function() {
-                    fire.style.gridArea = `${arrayy[4]}3`;
-                        }, 4000);
-                        setTimeout(function() {
-                            fire.style.gridArea = `${arrayy[5]}3`;
-                                }, 5000);
-                                setTimeout(function() {
-                                    fire.style.gridArea = `${arrayy[6]}3`;
-                                        }, 6000);
-
-}
 movingFire(alpha);
 
-for (var i = 0; i < 10; i++){
-    console.log(i);
-}
+
 
 // addEventListener("keydown", function (event) {
 
