@@ -2,15 +2,21 @@ const dangerousObjects = []
 const bonusObjects = []
 
 const plane = document.querySelector(".game-window__plane");
-
+let left = 6;
 addEventListener("keydown", function (event) {
-    if (event.keyCode === 37) {
+    if (event.keyCode === 37 && left > 1) {
         let currentPosition = plane.style.gridArea;
         console.log("aktualna pozycja", currentPosition);
         
         
-        plane.style.gridArea = `${--currentPosition}`;
+        plane.style.gridArea = `h` + (--left);
 
+    } else if (event.keyCode === 39 && left < 11) {
+        let currentPosition = plane.style.gridArea;
+        console.log("aktualna pozycja", currentPosition);
+        
+        
+        plane.style.gridArea = `h` + (++left);
     }
 });
 
