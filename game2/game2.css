@@ -1,9 +1,19 @@
-
+@keyframes move-left {
+    from { margin-left: 0px; }
+    to   { margin-left: -40px; }
+  }
+  .move-left {
+    animation-name: move-left;
+    animation-duration: 150ms;
+    animation-iteration-count: 1;
+    /* steps(10) infinite alternate; */
+  }
 
 .game-window__plane {
     font-size: 70px;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     width: 100%;
+    animation-fill-mode: both;
 }
 .grid-container {
     display: grid;
