@@ -18,11 +18,11 @@ const cookieNoBtn = document.querySelector(".cookie-btn-no");
 
 
 const cookieShow = () => {
-  if (!localStorage.cookie) {
+  if (!document.cookie) {
     cookieInfo.style.display = "block";
 
     cookieYesBtn.addEventListener("click", () => {
-      localStorage.setItem("cookie", "cookie");
+      document.cookie = "Cookie = cookie";
       cookieInfo.style.display = "none";
     })
 
