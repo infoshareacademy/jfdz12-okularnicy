@@ -82,8 +82,18 @@ h2:after {
     background-color: #e67e22;
     content: " ";
     width: 100px;
-    margin: 0 auto;
+    margin: 15px auto;
     margin-top: 30px;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
 /* Kamil */
@@ -340,23 +350,40 @@ text-align: justify;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 250px;
+    height: 350px;
     z-index: 99;
     visibility: hidden;
-    background-color: rgb(204,204,204, 0.9);
+    background-color: rgb(214,214,214, 0.95);
     border: #e67e22 solid 2px;
     border-radius: 15px;
     padding: 25px;
-    width: 60%;
+    width: 50%;
+    text-align: center;
+}
+
+.game-introduction{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    z-index: 99;
+    visibility: hidden;
+    background-color: rgb(214,214,214, 0.95);
+    border: #e67e22 solid 2px;
+    border-radius: 15px;
+    padding: 25px;
+    width: 50%;
+    text-align: center;
 }
 
 .instruction-btn,
 .instruction-btn:visited {
   background-color: #e67e22;
   color: white;
-  width: 35%;
+  width: 25%;
   padding: 10px;
-  margin: 5px;
+  margin: 15px;
   border-radius: 4px;
   cursor: pointer;
   border: none;

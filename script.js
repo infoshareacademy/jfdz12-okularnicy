@@ -41,12 +41,20 @@ cookieShow();
 
 const form = document.getElementById("form");
 const gameInfo = document.querySelector(".game-info");
+const gameIntro = document.querySelector(".game-introduction");
+const letsgo = document.querySelector(".letsgo");
 
-function travelToTheGame(event) {
+function getReady(event) {
   event.preventDefault();
   gameInfo.style.visibility = "visible";
 }
 
-form.addEventListener('submit', travelToTheGame);
+function travelToTheGame() {
+  gameInfo.style.visibility = "hidden";
+  gameIntro.style.visibility = "visible";
+}
+
+form.addEventListener("submit", getReady);
+letsgo.addEventListener("click", travelToTheGame)
 
 // end of game instructions

@@ -10,6 +10,26 @@ font-weight: 300;
 font-size: 20px;
 }
 
+h3 {
+    font-size: 110%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
 .game-main {
     width: 75%;
     height: 75%;
@@ -157,11 +177,29 @@ text-align: center;
   cursor: pointer;
   border: none;
   outline: none;
-  /* display: inline; */
 }
 
 .btn-restart:hover,
 .btn-restart:active {
+  background-color: #bf6516;
+}
+
+.btn-play,
+.btn-play:visited {
+  background-color: #e67e22;
+  color: white;
+  width: 35%;
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  justify-content: space-around;
+}
+
+.btn-play:hover,
+.btn-play:active {
   background-color: #bf6516;
 }
 
@@ -170,14 +208,25 @@ text-align: center;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 250px;
+    height: 350px;
+    width: 450px;
     z-index: 99;
     visibility: hidden;
     background-color: rgb(204,204,204, 0.9);
     border: #e67e22 solid 2px;
     border-radius: 15px;
     padding: 25px;
-    width: 400px;
+    text-align: center;
+    
+}
+
+.youLose {
+    height: 180px;
+}
+
+.score {
+    color: tomato;
+    font-weight: 600;
 }
 
 .footer {
