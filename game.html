@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="game.css">
+    <title>Pack Me Up - Game</title>
+</head>
+
+<body>
+    <div class="game-main">
+        <div class="clock">
+            <h2 id="time">00:00</h2>
+        </div>
+        <div class="menu">
+            <p>Pick up objects form the list</p>
+        </div>
+        <div class="list">
+            <div class="itemList"></div>
+            <div class="restart">
+                <button class="btn-restart" onclick="window.location.reload()">Restart</button>
+            </div>
+
+        </div>
+        <div class="game">
+            <div class="glasses"><img src="./images/Okulary.png" height="25px" /></div>
+            <div class="shoes"><img src="./images/Buty.png" height="35px" /></div>
+            <div class="hat"><img src="./images/Czapka.png" height="35px" /></div>
+            <div class="aid-kit"><img src="./images/Apteczka.png" height="35px" /></div>
+            <div class="compass"><img src="./images/Kompas.png" height="35px" /></div>
+            <div class="flashlight"><img src="./images/Latarka.png" height="35px" /></div>
+            <div class="bagpack"><img src="./images/Plecak.png" height="70px" /></div>
+            <div class="binoculars"><img src="./images/Lornetka.png" height="35px" /></div>
+            <div class="wallet"><img src="./images/Portfel.png" height="35px" /></div>
+            <div class="map"><img src="./images/Mapa.png" height="35px" /></div>
+            <div class="camera"><img src="./images/Aparat.png" height="35px" /></div>
+            <div class="watch" id="watch"><img src="./images/Zegarek.png" height="35px" /></div>
+            <div class="sunscreen"><img src="./images/Sunscreen.png" height="35px" /></div>
+            <div class="lighter"><img src="./images/Zapalniczka.png" height="35px" /></div>
+            <div class="phone"><img src="./images/Telefon.png" height="35px" /></div>
+        </div>
+        <div class="youWon end">
+            <p> Your score is <span class="score"></span></p>
+            <p>You are ready for the trip. Let's begin boarding</p>
+            <p>Awoid 🔥, 🦇, ☁, 🌧, 🌪, ❄, 💣 by turning left of right useing your keyboard </p>
+            <p>Catch ⛽ to get extra points</p>
+            <button class="btn-restart" onclick="window.location.reload()">Try again</button>
+            <button class="btn-restart"><a href="game2.html">Let's Go!</a></button>
+        </div>
+        <div class="youLose end">
+            <p>We are sorry :( You are not ready for the trip.</p>
+            <p>Do you want to try again?</p>
+            <button class="btn-restart" onclick="window.location.reload()">Yes</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <p>
+                Copyright &copy; 2019 Okularnicy @infoShareAcademy
+            </p>
+        </div>
+    </footer>
+    <script src="game.js"></script>
+</body>
+
+</html>

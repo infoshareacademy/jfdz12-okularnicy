@@ -49,12 +49,14 @@
   </section>
 
   <!-- Helena -->
+  <!-- Cookies -->
   <div class="cookie">
     <h4>Do you like cookies?</h4>
     <p>Our site is using cookies. Is that ok with you?</p>
     <button class="cookie-btn cookie-btn-no">No</button>
     <button class="cookie-btn cookie-btn-yes">Yes</button>
   </div>
+  <!-- End of Cookies -->
 
   <section id="main-functions" class="main-functions">
     <div class="ourrow">
@@ -145,15 +147,14 @@
         </h3>
       </div>
       <div class="container-sign">
-        <form action="/action_page.php" target="_blank">
-
+        <form action="#" id="form">
           <label for="fname">First Name</label>
           <input class="first-name" type="text" id="fname" name="firstname" placeholder="Your name..">
 
           <label for="lname">E-mail</label>
-          <input class="e-mall" type="email" id="email" name="e-mail" placeholder="Your e-mail">
+          <input class="e-mall" type="email" id="email" name="e-mail" placeholder="Your e-mail" required>
           <label class="check_box" for="check">
-            <input class="check-box" type="checkbox" name="Privacy policy">I have read and
+            <input class="check-box" type="checkbox" name="Privacy policy" required>I have read and
             accepted the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
           </label>
           <div class="btn-sub">
@@ -162,6 +163,16 @@
         </form>
       </div>
     </div>
+
+    <!-- Game info -->
+    <div class="game-info">
+      <p>We are sorry :( You are not ready for the trip.</p>
+      <p>Do you want to try again?</p>
+      <button class="instruction-btn" onclick="window.location.reload()">No, thanks</button>
+      <a href="game.html"><button class="instruction-btn">Let's go!</button></a>
+    </div>
+
+    <!-- End of Game Info -->
   </section>
 
 
