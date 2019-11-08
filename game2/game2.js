@@ -9,7 +9,7 @@ class Obstacle {
         this.HTMLtag;
     }
     generateObstacle() {
-        this.emoji = dangerousObjects[Math.round(Math.random() * dangerousObjects.length - 1)];
+        this.emoji = dangerousObjects[ Math.ceil(Math.random() * dangerousObjects.length -1 )];
         this.positon = `${Math.round(Math.random() * 11) + 1}`;
         this.HTMLtag = document.createElement("div");
         const tag = document.querySelector(".grid-container");
@@ -38,7 +38,7 @@ class Obstacle {
 }
 
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 2; i++) {
     setInterval(function () {
         const obj = new Obstacle();
         obj.generateObstacle()
@@ -58,16 +58,16 @@ let left = 6;
 addEventListener("keydown", function (event) {
     if (event.keyCode === 37 && left > 1) {
 
-        plane.animate([
-            // keyframes
-            { transform: 'translateX(0px)' },
-            { transform: 'translateX(-80px)' },
-        ], {
-                // timing options
-                duration: 500,
-                iterations: 1,
-                easing: 'ease-in',
-            });
+        // plane.animate([
+        //     // keyframes
+        //     { transform: 'translateX(0px)' },
+        //     { transform: 'translateX(-80px)' },
+        // ], {
+        //         // timing options
+        //         duration: 500,
+        //         iterations: 1,
+        //         easing: 'ease-in',
+        //     });
 
         let currentPosition = plane.style.gridArea;
         plane.style.gridArea = `h` + (--left);
@@ -75,7 +75,7 @@ addEventListener("keydown", function (event) {
 
     } else if (event.keyCode === 39 && left < 11) {
         let currentPosition = plane.style.gridArea;
-        console.log("aktualna pozycja", currentPosition);
+        // console.log("aktualna pozycja", currentPosition);
         plane.style.gridArea = `h` + (++left);
     }
 });
