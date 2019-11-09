@@ -10,20 +10,30 @@
   }
 
 .game-window__plane {
+  position: absolute;
+  top: 550px;
+  left: 250px;  
     font-size: 50px;
-    /* transform: rotate(-45deg); */
-    width: 100%;
-    animation-fill-mode: both;
+    transform: rotate(-45deg);
+    /* width: 100%; */
+    /* animation-fill-mode: both; */
+    transition: left 0.2s linear;
+    
 }
 
 .obstacle {
   font-size: 50px;
+    position: absolute;
+  top: -50px;
+  transition: top 0.5s linear;
 }
 
 .grid-container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* display: grid; */
+    background-color: lightblue;
+    width: 600px;
+    height: 600px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11"
                          "b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 b11"
@@ -32,7 +42,7 @@
                          "e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11"
                          "f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11"
                          "g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11"
-                         "h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11";
+                         "h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11"; */
                         
 }
 

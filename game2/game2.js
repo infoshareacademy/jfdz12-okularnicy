@@ -1,111 +1,79 @@
 const dangerousObjects = ["🔥", "🦇", "☁️", "🌧️", "🌪️", "❄️", "💣"]
 const bonusObjects = ["⛽"]
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+let speed = 6;
 
 class Obstacle {
     constructor(emoji) {
         this.emoji = emoji;
         this.position;
+        this.positonY;
         this.HTMLtag;
     }
     generateObstacle() {
         this.emoji = dangerousObjects[ Math.ceil(Math.random() * dangerousObjects.length -1 )];
-        this.positon = `${Math.round(Math.random() * 11) + 1}`;
+        this.positon = `${Math.round(Math.random() * 600) + 1}`;
         this.HTMLtag = document.createElement("div");
         const tag = document.querySelector(".grid-container");
         tag.appendChild(this.HTMLtag);
         this.HTMLtag.classList.add("obstacle");
         this.HTMLtag.innerHTML = this.emoji;
-        this.HTMLtag.style.gridArea = `a${this.positon}`
-
-
+        this.HTMLtag.style.left = `${this.positon}px`
     }
     moveObstacle() {
         let num = 0;
         const x = this.HTMLtag;
         const y = this.positon;
-        setInterval(function () {
+        const interval = setInterval(function () {
             num++;
-            x.style.gridArea = `${alphabet[num]}${y}`;
-            if (num > 7) {
-                x.style.display = "none";
-                clearInterval(this.moveObstacle);
+            x.style.top = `${num*speed}px`;
+            manageCollision ()
+            if ((num*speed) > 600) {
+                stopMoving()            
+                }
+        }, 100);
+       
+        function stopMoving () {
+            clearInterval(interval)
+            x.style.display = "none";
+        }
+       
+        const objPosiitionLeft = parseInt(this.HTMLtag.style.left.replace("px", ""));
+               
+        function manageCollision (){
+
+            const planePosiotionLeft = parseInt(plane.style.left.replace("px", ""))
+
+            if (planePosiotionLeft >= objPosiitionLeft && planePosiotionLeft <= (objPosiitionLeft +50 )){
+                console.log ("collision")
             }
-        }, 1000);
+        
+        }
 
     }
 
 }
-
-
 for (let i = 0; i < 2; i++) {
     setInterval(function () {
         const obj = new Obstacle();
         obj.generateObstacle()
         obj.moveObstacle()
-    }, 1000);
+    }, 3000);
 }
 
-// const obj1 = new Obstacle();
-// const obj4 = new Obstacle();
-// const obj3 = new Obstacle();
-// const obj2 = new Obstacle();
-
-
-
 const plane = document.querySelector(".game-window__plane");
-let left = 6;
+let left = 250;
 addEventListener("keydown", function (event) {
     if (event.keyCode === 37 && left > 1) {
+        left -=15;
+       plane.style.left = `${left}px`;
 
-        // plane.animate([
-        //     // keyframes
-        //     { transform: 'translateX(0px)' },
-        //     { transform: 'translateX(-80px)' },
-        // ], {
-        //         // timing options
-        //         duration: 500,
-        //         iterations: 1,
-        //         easing: 'ease-in',
-        //     });
-
-        let currentPosition = plane.style.gridArea;
-        plane.style.gridArea = `h` + (--left);
-
-
-    } else if (event.keyCode === 39 && left < 11) {
-        let currentPosition = plane.style.gridArea;
-        // console.log("aktualna pozycja", currentPosition);
-        plane.style.gridArea = `h` + (++left);
+    } else if (event.keyCode === 39 && left < 600) {
+        left += 15;
+        plane.style.left = `${left}px`;
     }
 });
 
-// const fire = document.querySelector('.game-window_fire');
-// let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-
-// function movingFire(arrayy) {
-//     let x = 0;
-//     let move = setInterval(function () {
-//         x++;
-//         fire.style.gridArea = `${arrayy[x]}3`;
-//         if (x > 7) {
-//             fire.style.display = "none";
-//             console.log("hello");
-//             clearInterval(move);
-
-//         }
-//     }, 1000);
-// }
-
-// movingFire(alpha);
 
 
 
-// addEventListener("keydown", function (event) {
-
-//     if (event.keyCode === 39) {
-//         let currentPosition = window.getComputedStyle(plane).left
-//         let position = currentPosition.slice(0, currentPosition.length - 2)
-//         plane.style.grid-area = `${parseInt(position) + 100}px`
-//     }
-// });
