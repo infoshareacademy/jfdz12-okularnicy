@@ -32,7 +32,7 @@ class Obstacle {
                 stopMoving()            
                 }
         }, 100);
-       
+
         function stopMoving () {
             clearInterval(interval)
             x.style.display = "none";
@@ -44,9 +44,17 @@ class Obstacle {
 
             const planePosiotionLeft = parseInt(plane.style.left.replace("px", ""))
 
-            if (planePosiotionLeft >= objPosiitionLeft && planePosiotionLeft <= (objPosiitionLeft +50 )){
-                console.log ("collision")
+            if (planePosiotionLeft >= (objPosiitionLeft -65) && planePosiotionLeft <= (objPosiitionLeft + 65) && (num*speed) >520 && (num*speed)<600){
+                console.log ("collision");
+                plane.animate([
+                    { background: 'none' }, 
+                    { background: 'red' }
+                  ], { 
+                    duration: 250,
+                    iterations: 1
+                  });
             }
+            
         
         }
 
