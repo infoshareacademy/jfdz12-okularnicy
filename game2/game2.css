@@ -1,40 +1,28 @@
-@keyframes move-left {
-    from { margin-left: 0px; }
-    to   { margin-left: -40px; }
-  }
-  .move-left {
-    animation-name: move-left;
-    animation-duration: 150ms;
-    animation-iteration-count: 1;
-    /* steps(10) infinite alternate; */
-  }
-
 .game-window__plane {
-  position: absolute;
-  top: 550px;
-  left: 250px;  
-  width: 65px;
-  text-align: center;
+    position: absolute;
+    top: 550px;
+    left: 250px;
+    width: 65px;
+    text-align: center;
     font-size: 50px;
     transform: rotate(-45deg);
     transition: left 0.2s linear;
-    
 }
 
 .obstacle {
-  font-size: 50px;
+    font-size: 50px;
     position: absolute;
-  top: -50px;
-  transition: top 0.5s linear;
-  background-color: lightcyan;
-  width: 65px;
-  text-align: center;
+    top: -50px;
+    transition: top 0.5s linear;
+    background-color: lightcyan;
+    width: 65px;
+    text-align: center;
 }
 
 .grid-container {
     /* display: grid; */
     background-color: lightblue;
-    width: 600px;
+    width: 650px;
     height: 600px;
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -46,6 +34,4 @@
                          "f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11"
                          "g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11"
                          "h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11"; */
-                        
 }
-
