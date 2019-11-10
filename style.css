@@ -16,7 +16,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -37,7 +38,7 @@ html, body {
     max-width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
-   }
+}
 
 section {
     padding: 80px 0;
@@ -49,7 +50,9 @@ section {
 
 /* ----- HEADINGS ----- */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -85,11 +88,13 @@ h2:after {
     margin: 0 auto;
     margin-top: 30px;
 }
+
 /* Kamil */
 
 /* Form */
 
-.e-mall, .first-name {
+.e-mall,
+.first-name {
     display: block;
     width: 100%;
     padding: 12px;
@@ -98,26 +103,26 @@ h2:after {
     box-sizing: border-box;
     margin: 6px auto 16px auto;
     resize: vertical;
-  }
-  
-  .submit-btn,
-  .submit-btn:visited {
+}
+
+.submit-btn,
+.submit-btn:visited {
     background-color: #e67e22;
     color: white;
     padding: 10px 30px;
     border-radius: 4px;
     cursor: pointer;
     border: none;
-  }
-  
-  .submit-btn:hover,
-  .submit-btn:active {
+}
+
+.submit-btn:hover,
+.submit-btn:active {
     background-color: #bf6516;
     border-radius: 4px;
     border: none;
-  }
-  
-  .container-sign {
+}
+
+.container-sign {
     display: block;
     border-radius: 5px;
     background-color: #fff;
@@ -125,30 +130,31 @@ h2:after {
     width: 80%;
     color: #e67e22;
     margin: 5% auto 5% auto;
-  }
+}
 
-  .btn-sub {
-      display: block;
-      text-align: center;
-  }
+.btn-sub {
+    display: block;
+    text-align: center;
+}
 
-  .sign-text {
-      display: block;
-      text-align: center;
-  }
+.sign-text {
+    display: block;
+    text-align: center;
+}
 
-  .sign-up {
-      background-color: #f2f2f2;
-  }
+.sign-up {
+    background-color: #f2f2f2;
+}
 
 
-  .check_box a {
-      color: #555;
-  }
+.check_box a {
+    color: #555;
+}
 
 .check-box {
     margin: 5px 10px 10px 15px;
 }
+
 /* Adam */
 
 .navbar-fixed-top.scrolled {
@@ -195,25 +201,26 @@ h2:after {
     background-color: #e67e22;
     color: white;
     padding: 12px 12px;
-    width: 200px;
+    width: 150px;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    margin: 5px 5px;
-    
+    margin: 8px 8px;
 }
 
+
 body.modal-open {
-    padding-right: 0px !important; 
+    padding-right: 0px !important;
 }
 
 button:focus {
     outline: 0 !important;
 }
 
-.team-btn:hover  {
+.team-btn:hover {
     background-color: #bf6516;
- }
+
+}
 
 
 .team {
@@ -222,14 +229,15 @@ button:focus {
 
 .fotobutton {
     max-width: 75px;
-   border-radius: 38px;    
+    border-radius: 38px !important;
+    margin: 8px;
 }
 
-.modal-links{
+.modal-links {
     text-align: center;
 }
 
-.modal-text{
+.modal-text {
     text-align: justify;
 }
 
@@ -238,12 +246,54 @@ button:focus {
     justify-content: center;
 }
 
-@media (max-width: 890px){
-    .team-buttons{
+@media (max-width: 890px) {
+    .team-buttons {
         max-width: 550px;
         margin: 0 auto;
     }
 }
+
+#button-back-to-top {
+    display: inline-block;
+    background-color: #e67e22;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    margin: 35px;
+}
+
+#button-back-to-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button-back-to-top:hover {
+    cursor: pointer;
+    background-color: #bf6516;
+}
+
+
+#button-back-to-top.show {
+    opacity: 20;
+    visibility: visible;
+}
+
+
+
 /* Helena */
 
 .main-functions-header {
@@ -254,7 +304,7 @@ button:focus {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 75px 1fr;
-    grid-template-areas: "list-icon preparation-icon cloud-icon chcek-icon" "list-description preparation-description cloud-description check-description";
+    grid-template-areas: "list-icon preparation-icon cloud-icon chcek-icon""list-description preparation-description cloud-description check-description";
     justify-items: center;
     grid-column-gap: 5%;
 }
@@ -296,7 +346,10 @@ button:focus {
     grid-area: check-description;
 }
 
-.list-description, .preparation-description, .cloud-description, .check-description {
+.list-description,
+.preparation-description,
+.cloud-description,
+.check-description {
     text-align: center;
 }
 
@@ -305,7 +358,7 @@ button:focus {
     bottom: 5%;
     right: 5%;
     z-index: 99;
-    background-color: rgb(204,204,204, 0.5);
+    background-color: rgb(204, 204, 204, 0.5);
     display: none;
     border: #e67e22 solid 2px;
     border-radius: 15px;
@@ -317,26 +370,26 @@ button:focus {
     .cookie {
         width: 90%;
     }
- }
+}
 
 
 .cookie-btn,
 .cookie-btn:visited {
-  background-color: #e67e22;
-  color: white;
-  width: 70px;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
+    background-color: #e67e22;
+    color: white;
+    width: 70px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
 }
 
 .cookie-btn:hover,
 .cookie-btn:active {
-  background-color: #bf6516;
-  border-radius: 4px;
-  border: none;
+    background-color: #bf6516;
+    border-radius: 4px;
+    border: none;
 }
 
 .footer {
