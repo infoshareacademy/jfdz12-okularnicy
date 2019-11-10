@@ -32,29 +32,28 @@ const cookieShow = () => {
     })
   }
 };
-
 cookieShow();
 
 // end of cookieInfo
 
-// game instructions
 
-const form = document.getElementById("form");
-const gameInfo = document.querySelector(".game-info");
-const gameIntro = document.querySelector(".game-introduction");
-const letsgo = document.querySelector(".letsgo");
+// back to top button
 
-function getReady(event) {
-  event.preventDefault();
-  gameInfo.style.visibility = "visible";
-}
+const btn = $('#button-back-to-top');
 
-function travelToTheGame() {
-  gameInfo.style.visibility = "hidden";
-  gameIntro.style.visibility = "visible";
-}
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 250) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
 
-form.addEventListener("submit", getReady);
-letsgo.addEventListener("click", travelToTheGame)
+});
 
-// end of game instructions
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, '250');
+
+})

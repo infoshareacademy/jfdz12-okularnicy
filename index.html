@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
   <title>Pack Me App</title>
 </head>
 
@@ -49,14 +51,12 @@
   </section>
 
   <!-- Helena -->
-  <!-- Cookies -->
   <div class="cookie">
     <h4>Do you like cookies?</h4>
     <p>Our site is using cookies. Is that ok with you?</p>
     <button class="cookie-btn cookie-btn-no">No</button>
     <button class="cookie-btn cookie-btn-yes">Yes</button>
   </div>
-  <!-- End of Cookies -->
 
   <section id="main-functions" class="main-functions">
     <div class="ourrow">
@@ -142,19 +142,20 @@
     <div class="ourrow">
       <div class="sign-text">
         <h2>Sign up</h2>
-        <p>We would love to join you with your next travel expierence.
+        <h3>We would love to join you with your next travel expierence.
           Sign up and be ready to go
-        </p>
+        </h3>
       </div>
       <div class="container-sign">
-        <form action="#" id="form">
+        <form action="/action_page.php" target="_blank">
+
           <label for="fname">First Name</label>
           <input class="first-name" type="text" id="fname" name="firstname" placeholder="Your name..">
 
           <label for="lname">E-mail</label>
-          <input class="e-mall" type="email" id="email" name="e-mail" placeholder="Your e-mail" required>
+          <input class="e-mall" type="email" id="email" name="e-mail" placeholder="Your e-mail">
           <label class="check_box" for="check">
-            <input class="check-box" type="checkbox" name="Privacy policy" required>I have read and
+            <input class="check-box" type="checkbox" name="Privacy policy">I have read and
             accepted the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
           </label>
           <div class="btn-sub">
@@ -163,26 +164,6 @@
         </form>
       </div>
     </div>
-
-    <!-- Game info -->
-    <div class="game-info">
-      <p>Thanks for your email!</p>
-      <h3>Welcome in our adventure</h3>
-      <p>As the reward You can play our Pack Me Up Game</p>
-      <button class="instruction-btn" onclick="window.location.reload()">No, thanks</button>
-      <button class="instruction-btn letsgo">Let's go!</button>
-    </div>
-    <div class="game-introduction">
-      <p>There are two stages</p>
-      <h3> Stage One - Packing Up:</h3>
-      <p>
-        Collect items from the list to preapare for the trip.<br>
-        Every click counts!
-      </p>
-      <a href="game.html"><button class="instruction-btn">I'm ready!</button></a>
-    </div>
-
-    <!-- End of Game Info -->
   </section>
 
 
@@ -195,7 +176,7 @@
       </div>
       <div class="team-buttons">
         <button type="button" class="team-btn" data-toggle="modal" data-target="#modalHelenaMakrenek">
-          Helena Makrenek <img src="./images/cat.png" class="fotobutton">
+          Helena Makrenek <img src="images/makrenek.png" class="fotobutton">
         </button>
 
         <!-- Modal -->
@@ -211,10 +192,11 @@
               </div>
               <div class="modal-body">
                 <div class="modal-text">
-                  <p>Szalona podróżniczka, kulinarna eksploratorka.</p> 
+                  <p>Crazy traveler, culinary explorer.</p> 
                 </div>
                 <div class="modal-links">
-                  <a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/helena-makrenek-89321117/?originalSubdomain=pl"
+                    target="_blank"><i class="icon-linkedin"></i></a>
                   <a href="https://github.com/Makrenek" target="_blank"><i class="icon-github-circled"></i></a>
                 </div>
               </div>
@@ -227,7 +209,7 @@
 
         <!-- Button trigger modal -->
         <button type="button" class="team-btn" data-toggle="modal" data-target="#modalAdamBrudzinski">
-          Adam Brudzyński <img src="./images/cat.png" class="fotobutton">
+          Adam Brudzyński <img src="images/brudzynski.png" class="fotobutton">
         </button>
 
         <!-- Modal -->
@@ -243,7 +225,7 @@
               </div>
               <div class="modal-body">
                 <div class="modal-text">
-                  <p>treść</p> 
+                  <p>text about Adam</p> 
                 </div>
                 <div class="modal-links">
                   <a href="https://www.linkedin.com/in/adam-brudzy%C5%84ski-3075838b/" target="_blank"><i
@@ -260,7 +242,7 @@
 
         <!-- Button trigger modal -->
         <button type="button" class="team-btn" data-toggle="modal" data-target="#modalKamilJaworski">
-          Kamil Jaworski <img src="./images/cat.png" class="fotobutton">
+          Kamil Jaworski <img src="images/unnamedtransform.png" class="fotobutton">
         </button>
 
         <!-- Modal -->
@@ -276,7 +258,7 @@
               </div>
               <div class="modal-body">
                 <div class="modal-text">
-                  <p>treść</p> 
+                  <p>text about Kamil</p> 
                 </div>
                 <div class="modal-links">
                   <a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a>
@@ -292,7 +274,7 @@
 
         <!-- Button trigger modal -->
         <button type="button" class="team-btn" data-toggle="modal" data-target="#modalJakubZielinski">
-          Jakub Zieliński <img src="./images/cat.png" class="fotobutton">
+          Jakub Zieliński <img src="images/zielinski.png" class="fotobutton">
         </button>
 
         <!-- Modal -->
@@ -308,8 +290,8 @@
               </div>
               <div class="modal-body">
                 <div class="modal-text">
-                  <p>Dumny tata sześciorga dzieci. Zawodowo psycholog, z pasji podróżnik i mięsożerca. Nie straszna mu
-                    kuchnia oraz kontakty z ludźmi</p> 
+                  <p>Proud dad of six children. Professionally psychologist, passionate traveler and carnivore. He is
+                    not afraid of cuisine and contacts with people.</p> 
                 </div>
                 <div class="modal-links">
                   <a href="https://www.linkedin.com/in/jakub-zieli%C5%84ski-85a23a15b/" target="_blank"><i
@@ -328,6 +310,9 @@
 
   </section>
 
+  <!-- Back to top button -->
+  <a id="button-back-to-top"></a>
+
   <!-- Helena -->
   <footer class="footer">
     <div>
@@ -338,14 +323,15 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="script.js"></script>
 </body>
 
