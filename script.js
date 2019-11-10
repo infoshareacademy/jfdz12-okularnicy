@@ -32,11 +32,31 @@ const cookieShow = () => {
     })
   }
 };
-
 cookieShow();
 
 // end of cookieInfo
 
+
+// back to top button
+
+const btn = $('#button-back-to-top');
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 250) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+
+});
+
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, '250');
+
+})
 // game instructions
 
 const form = document.getElementById("form");
