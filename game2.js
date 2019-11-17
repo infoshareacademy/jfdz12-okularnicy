@@ -1,6 +1,6 @@
-const dangerousObjects = ["🔥", "🦆", "🦇", "🌧️", "🌪️", "❄️", "💩", "🌩️", "⛈️", "⚡"]
-const deadlyObjects = ["💣"]
-const bonusObjects = ["⛽"]
+const dangerousObjects = [ "🧟‍♂️", "🦇", "🌧️", "🌪️", "❄️", "💩", "🌩️", "⛈️", "⚡"]
+
+const bonusObjects = ["⛽", "💵", "💶", ]
 
 const gameWindow = document.querySelector(".game-container").getBoundingClientRect()
 const time = document.getElementById("time");
@@ -17,8 +17,8 @@ const planeProperties = plane.getBoundingClientRect()
 let speed = 17;
 let play = true;
 let start = false;
-let life = parseInt(localStorage.getItem("myScore")) || 100;
-let points = 0;
+let life = 100
+let points = (parseInt(localStorage.getItem("myScore")) || 0)
 let left = Math.round((gameWindow.width - plane.getBoundingClientRect().width) / 2);
 let score = 45
 let distance = 0
@@ -43,18 +43,20 @@ new timer(function (value) {
     time.textContent = timerMsg;
     pointIndicator.innerText = points;
     lifeIndicator.innerText = life;
-    points = Math.floor(life * distance * 0.00005);
+    
     score = value;
 });
 
 function gameOver() {
     play = false;
+    document.querySelector(".score2").innerText = points;
     youLose.style.visibility = "visible";
     gameStats.style.visibility = "hidden";
 }
 
 function gameEnd() {
     play = false;
+    points += life
     document.querySelector(".score").innerText = points;
     youWon.style.visibility = "visible";
     gameStats.style.visibility = "hidden";
@@ -80,22 +82,37 @@ function lifeLeft() {
         gameOver()
     }
 }
+function givePoints() {
+    plane.animate([
+        { background: 'none' },
+        { background: 'radial-gradient(circle, rgba(131,255,0,1) 0%, rgba(11,255,0,1) 13%, rgba(0,255,44,0) 76%)' }
+    ], {
+            duration: 350,
+            iterations: 1
+        });
+    points += 10
+}
 
 class Obstacle {
-    constructor(emoji) {
-        this.emoji = emoji;
+    constructor(type) {
+        this.emoji;
         this.position;
         this.positonY;
         this.HTMLtag;
+        this.type = type;
 
     }
     generateObstacle() {
-        this.emoji = dangerousObjects[Math.ceil(Math.random() * dangerousObjects.length - 1)];
+        if (this.type === "bad" ) {
+            this.emoji = dangerousObjects[Math.ceil(Math.random() * dangerousObjects.length - 1)];
+        } else {
+            this.emoji = bonusObjects[Math.ceil(Math.random() * bonusObjects.length - 1)];
+        }
         this.positon = `${Math.round(Math.random() * gameWindow.width) - 35}`;
         this.HTMLtag = document.createElement("div");
         const tag = document.querySelector(".game-container");
         tag.appendChild(this.HTMLtag);
-        this.HTMLtag.classList.add("obstacle");
+        this.HTMLtag.classList.add(`${this.type}`,`obstacle`);
         this.HTMLtag.innerHTML = this.emoji;
         this.HTMLtag.style.left = `${parseInt(this.positon) + gameWindow.x}px`
     }
@@ -105,6 +122,7 @@ class Obstacle {
         const x = this.HTMLtag;
         const y = this.positon;
         this.positonY = objPositionTop
+        const objType = this.type;
         const interval = setInterval(function () {
             if (play) {
                 num++;
@@ -131,23 +149,46 @@ class Obstacle {
 
             if (planePosiotionLeft >= (objPosiitionLeft - 55) &&
                 planePosiotionLeft <= (objPosiitionLeft + 45) &&
-                (num * speed) > 445 &&
-                (num * speed) < 500) {
-                lifeLeft();
-
-            }
+                (parseInt(x.style.top.replace("px", ""))) > 480 &&
+                (parseInt(x.style.top.replace("px", ""))) < 530) {
+                if (objType === "bad") {
+                    lifeLeft();
+                } else if (objType === "good") {
+                    x.animate([
+                        { opacity: '100' },
+                        { opacity: '0' }
+                    ], {
+                            duration: 1,
+                            iterations: 1
+                        });
+                    givePoints()
+                    setTimeout(function(){x.remove()}, 400)
+                    
+                     
+                }
 
         }
 
     }
 
 }
+}
 
 for (let i = 0; i < 3; i++) {
     setInterval(function () {
         if (play && start) {
             gameStart.style.visibility = "hidden"
-            const obj = new Obstacle();
+            const obj = new Obstacle("bad");
+            obj.generateObstacle()
+            obj.moveObstacle()
+        }
+    }, 1200);
+}
+for (let i = 0; i < 1; i++) {
+    setInterval(function () {
+        if (play && start) {
+            gameStart.style.visibility = "hidden"
+            const obj = new Obstacle("good");
             obj.generateObstacle()
             obj.moveObstacle()
         }
@@ -164,7 +205,7 @@ addEventListener("keydown", function (event) {
         start = true
         left += 20;
         plane.style.left = `${left + gameWindow.x}px`;
-    } 
+    }
     // else if (event.keyCode === 38 && speed < 17) {
     //     speed += 0.5;
     // } else if (event.keyCode === 40 && speed > 12) {
