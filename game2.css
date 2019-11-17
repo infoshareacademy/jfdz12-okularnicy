@@ -1,0 +1,75 @@
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.game-window__plane {
+    position: absolute;
+    top: 530px;
+    left: calc(100%/2 - 65px);
+    text-align: center;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
+    transition: left 0.15s linear;
+}
+
+.obstacle {
+    font-size: 50px;
+    position: absolute;
+    top: -60px;
+    transition: top 0.2s linear;
+    text-align: center;
+}
+.bad {
+    z-index: 3;
+}
+
+.good {
+    background: radial-gradient(circle, rgba(131,255,0,1) 0%, rgba(11,255,0,1) 13%, rgba(0,255,44,0.6432948179271709) 38%, rgba(0,255,44,0) 73%);    z-index: 2;
+}
+
+.game-container {
+    background-color: lightblue;
+    margin: 0px auto 0px auto;
+    width: 600px;
+    min-height: 600px;
+    height: 95vh;
+}
+
+.game-bg {
+    width: 690px;
+    margin: 0px auto 0px auto;
+    background-color: lightblue;
+    min-height: 600px;
+    height: 95vh;
+}
+
+.game-stats {
+    z-index: 1000;
+}
+
+.end {
+    height: auto;
+}
+
+.start-game {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 450px;
+    z-index: 99;
+    visibility: visible;
+    background-color: rgb(204, 204, 204, 0.9);
+    border: #e67e22 solid 2px;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.footer {
+    z-index: 50;
+}
