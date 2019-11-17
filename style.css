@@ -16,8 +16,7 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -50,9 +49,7 @@ section {
 
 /* ----- HEADINGS ----- */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -103,8 +100,7 @@ h3:after {
 
 /* Form */
 
-.e-mall,
-.first-name {
+.e-mall, .first-name {
     display: block;
     width: 100%;
     padding: 12px;
@@ -115,8 +111,7 @@ h3:after {
     resize: vertical;
 }
 
-.submit-btn,
-.submit-btn:visited {
+.submit-btn, .submit-btn:visited {
     background-color: #e67e22;
     color: white;
     padding: 10px 30px;
@@ -126,8 +121,7 @@ h3:after {
     outline: none;
 }
 
-.submit-btn:hover,
-.submit-btn:active {
+.submit-btn:hover, .submit-btn:active {
     background-color: #bf6516;
     border-radius: 4px;
     border: none;
@@ -156,7 +150,6 @@ h3:after {
 .sign-up {
     background-color: #f2f2f2;
 }
-
 
 .check_box a {
     color: #555;
@@ -219,7 +212,6 @@ h3:after {
     margin: 8px 8px;
 }
 
-
 body.modal-open {
     padding-right: 0px !important;
 }
@@ -230,9 +222,7 @@ button:focus {
 
 .team-btn:hover {
     background-color: #bf6516;
-
 }
-
 
 .team {
     text-align: center;
@@ -274,8 +264,7 @@ button:focus {
     position: fixed;
     bottom: 50px;
     right: 30px;
-    transition: background-color .3s,
-        opacity .5s, visibility .5s;
+    transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
@@ -297,13 +286,16 @@ button:focus {
     background-color: #bf6516;
 }
 
-
 #button-back-to-top.show {
     opacity: 20;
     visibility: visible;
 }
 
-
+@media (max-width: 890px) {
+    #button-back-to-top {
+        display: none;
+    }
+}
 
 /* Helena */
 
@@ -357,10 +349,7 @@ button:focus {
     grid-area: check-description;
 }
 
-.list-description,
-.preparation-description,
-.cloud-description,
-.check-description {
+.list-description, .preparation-description, .cloud-description, .check-description {
     text-align: center;
 }
 
@@ -380,13 +369,10 @@ button:focus {
 @media (max-width: 450px) {
     .cookie {
         width: 90%;
-
     }
 }
 
-
-.cookie-btn,
-.cookie-btn:visited {
+.cookie-btn, .cookie-btn:visited {
     background-color: #e67e22;
     color: white;
     width: 70px;
@@ -397,8 +383,7 @@ button:focus {
     border: none;
 }
 
-.cookie-btn:hover,
-.cookie-btn:active {
+.cookie-btn:hover, .cookie-btn:active {
     background-color: #bf6516;
     border-radius: 4px;
     border: none;
@@ -438,8 +423,7 @@ button:focus {
     text-align: center;
 }
 
-.instruction-btn,
-.instruction-btn:visited {
+.instruction-btn, .instruction-btn:visited {
     background-color: #e67e22;
     color: white;
     width: 150px;
@@ -450,8 +434,7 @@ button:focus {
     border: none;
 }
 
-.instruction-btn:hover,
-.instruction-btn:active {
+.instruction-btn:hover, .instruction-btn:active {
     background-color: #bf6516;
     border-radius: 4px;
     border: none;
