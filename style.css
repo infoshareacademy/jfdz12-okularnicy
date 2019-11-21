@@ -161,10 +161,6 @@ h3:after {
 
 /* Adam */
 
-.navbar-fixed-top{
-    background-color: rgb(204, 204, 204, 0);
-}
-
 .navbar-fixed-top.scrolled {
     background-color: #e67e22 !important;
     transition: background-color 200ms linear;
