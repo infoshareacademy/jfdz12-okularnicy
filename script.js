@@ -42,7 +42,7 @@ $(".team").hover(function () {
   $(".menu-team").css("background-color", "");
 });
 
-
+// end of nav-hightlights
 // cookieInfo
 
 const cookieInfo = document.querySelector(".cookie");
