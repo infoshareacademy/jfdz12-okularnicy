@@ -5,10 +5,44 @@ $(function () {
   });
 });
 
-$('.navbar-nav .nav-link').click(function () {
-  $('.navbar-nav .nav-link').removeClass('active');
+$('.nav-link').click(function () {
+  $('.nav-link').removeClass('active');
   $(this).addClass('active');
 })
+
+//nav-hightlights
+
+$(".hero").hover(function () {
+  $(".menu-home").css("background-color", "#bf6516");
+}, function () {
+  $(".menu-home").css("background-color", "");
+});
+
+$(".main-functions").hover(function () {
+  $(".menu-main").css("background-color", "#bf6516");
+}, function () {
+  $(".menu-main").css("background-color", "");
+});
+
+$(".more-functions").hover(function () {
+  $(".menu-more").css("background-color", "#bf6516");
+}, function () {
+  $(".menu-more").css("background-color", "");
+});
+
+$(".sign-up").hover(function () {
+  $(".menu-premiere").css("background-color", "#bf6516");
+}, function () {
+  $(".menu-premiere").css("background-color", "");
+});
+
+$(".team").hover(function () {
+  $(".menu-team").css("background-color", "#bf6516");
+}, function () {
+  $(".menu-team").css("background-color", "");
+});
+
+
 // cookieInfo
 
 const cookieInfo = document.querySelector(".cookie");
