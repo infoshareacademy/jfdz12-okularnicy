@@ -171,6 +171,12 @@ h3:after {
         background-color: #e67e22 !important;
     }
 }
+.nav-item {
+border-radius: 4px;
+cursor: pointer;
+border: none;
+margin: 0 3px;
+}
 
 .hero {
     height: 100vh;
