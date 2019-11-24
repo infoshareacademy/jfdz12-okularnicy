@@ -22,12 +22,9 @@ body {
     transition: top 0.2s linear;
     text-align: center;
 }
-.bad {
-    z-index: 3;
-}
 
 .good {
-    background: radial-gradient(circle, rgba(131,255,0,1) 0%, rgba(11,255,0,1) 13%, rgba(0,255,44,0.6432948179271709) 38%, rgba(0,255,44,0) 73%);    z-index: 2;
+    background: radial-gradient(circle, rgba(131,255,0,1) 0%, rgba(11,255,0,1) 13%, rgba(0,255,44,0.6432948179271709) 38%, rgba(0,255,44,0) 73%);
 }
 
 .game-container {
@@ -47,7 +44,8 @@ body {
 }
 
 .game-stats {
-    z-index: 1000;
+    position: relative;
+    z-index: 10;
 }
 
 .end {
@@ -68,8 +66,4 @@ body {
     border-radius: 15px;
     padding: 25px;
     text-align: center;
-}
-
-.footer {
-    z-index: 50;
 }

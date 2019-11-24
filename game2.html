@@ -15,27 +15,29 @@
 
 <body>
     <div class="game-bg">
-    <div class="game-container">
-        <div class="game-stats clock">
-            Time left: <span id="time">00:45</span>s Life: <span class="life">100</span> Points:<span class="points"></span>
+        <div class="game-container">
+            <div class="game-stats clock">
+                Time left: <span id="time">00:45</span>s Life: <span class="life">100</span> Points:<span
+                    class="points"></span>
+            </div>
+            <div class="game-window__plane"><img src="images/airplane.png" alt="airplane" /></div>
+            <div class="start-game">
+                <p>Press arrow left or right to start
+            </div>
+            <div class="youWon end">
+                <p> Your score is <span class="score"></span></p>
+                <p>Thank you for the journey!</p>
+                <button class="btn-play" onclick="window.location.reload()">Play again</button>
+                <a href="index.html"><button class="btn-play">Back to homepage</button></a>
+            </div>
+            <div class="youLose end">
+                <p>We are sorry. You are not ready for the trip.</p>
+                <p> Your score is <span class="score2"></span></p>
+                <p>Do you want to try again?</p>
+                <button class="btn-play" onclick="window.location.reload()">Yes</button>
+                <a href="index.html"><button class="btn-play">Back to homepage</button></a>
+            </div>
         </div>
-        <div class="game-window__plane"><img src="images/airplane.png" alt="airplane" /></div>
-        <div class="start-game">
-            <p>Press arrow left or right to start</div>
-        <div class="youWon end">
-            <p> Your score is <span class="score"></span></p>
-            <p>Thank you for the journey!</p>
-            <button class="btn-play" onclick="window.location.reload()">Play again</button>
-            <a href="index.html"><button class="btn-play">Back to homepage</button></a>
-        </div>
-        <div class="youLose end">
-            <p>We are sorry. You are not ready for the trip.</p>
-            <p> Your score is <span class="score2"></span></p>
-            <p>Do you want to try again?</p>
-            <button class="btn-play" onclick="window.location.reload()">Yes</button>
-            <a href="index.html"><button class="btn-play">Back to homepage</button></a>
-        </div>
-    </div>
     </div>
     <footer class="footer">
         <div>
