@@ -51,7 +51,6 @@ h3:after {
 .clock {
     grid-area: "clock";
     margin: 5px;
-    padding: 10ypx;
     background-color: #f6f6f6;
     border: #e67e22 solid 2px;
     border-radius: 8px;

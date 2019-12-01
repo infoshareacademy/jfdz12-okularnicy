@@ -1,8 +1,8 @@
-const dangerousObjects = [ "🧟‍♂️", "🦇", "🌧️", "🌪️", "❄️", "💩", "🌩️", "⛈️", "⚡"]
+const dangerousObjects = ["🧟‍♂️", "🦇", "🌧️", "🌪️", "❄️", "💩", "🌩️", "⛈️", "⚡"];
 
-const bonusObjects = ["⛽", "💵", "💶", ]
+const bonusObjects = ["⛽", "💵", "💶",];
 
-const gameWindow = document.querySelector(".game-container").getBoundingClientRect()
+const gameWindow = document.querySelector(".game-container").getBoundingClientRect();
 const time = document.getElementById("time");
 const pointIndicator = document.querySelector(".points");
 const lifeIndicator = document.querySelector(".life");
@@ -12,16 +12,17 @@ const youLose = document.querySelector(".youLose");
 const gameStats = document.querySelector(".game-stats");
 const gameStart = document.querySelector(".start-game");
 
+const planeProperties = plane.getBoundingClientRect();
 
-const planeProperties = plane.getBoundingClientRect()
 let speed = 17;
 let play = true;
 let start = false;
-let life = 100
-let points = (parseInt(localStorage.getItem("myScore")) || 0)
+let gameFinished = false;
+let life = 100;
+let points = (parseInt(localStorage.getItem("myScore")) || 0);
 let left = Math.round((gameWindow.width - plane.getBoundingClientRect().width) / 2);
-let score = 45
-let distance = 0
+let score = 45;
+let distance = 0;
 
 
 function timer(callback, value) {
@@ -43,11 +44,12 @@ new timer(function (value) {
     time.textContent = timerMsg;
     pointIndicator.innerText = points;
     lifeIndicator.innerText = life;
-    
+
     score = value;
 });
 
 function gameOver() {
+    gameFinished = true;
     play = false;
     document.querySelector(".score2").innerText = points;
     youLose.style.visibility = "visible";
@@ -55,16 +57,17 @@ function gameOver() {
 }
 
 function gameEnd() {
-    play = false;
-    points += life
-    document.querySelector(".score").innerText = points;
-    youWon.style.visibility = "visible";
-    gameStats.style.visibility = "hidden";
-
+    if (!gameFinished) {
+        play = false;
+        points += life
+        document.querySelector(".score").innerText = points;
+        youWon.style.visibility = "visible";
+        gameStats.style.visibility = "hidden";
+    }
 }
 
 function calculateDistance() {
-    distance += speed * score
+    distance += speed * score;
 
 }
 
@@ -73,9 +76,9 @@ function lifeLeft() {
         { background: 'none' },
         { background: 'radial-gradient(circle, rgba(252,0,0,1) 0%, rgba(121,9,9,0) 70%, rgba(255,0,0,0) 100%)' }
     ], {
-            duration: 350,
-            iterations: 1
-        });
+        duration: 350,
+        iterations: 1
+    });
     if (life > 0) {
         life -= 2
     } else if (life <= 0) {
@@ -87,41 +90,37 @@ function givePoints() {
         { background: 'none' },
         { background: 'radial-gradient(circle, rgba(131,255,0,1) 0%, rgba(11,255,0,1) 13%, rgba(0,255,44,0) 76%)' }
     ], {
-            duration: 350,
-            iterations: 1
-        });
+        duration: 350,
+        iterations: 1
+    });
     points += 10
 }
 
 class Obstacle {
     constructor(type) {
-        this.emoji;
-        this.position;
-        this.positonY;
-        this.HTMLtag;
+        // this.emoji;
+        // this.HTMLtag;
         this.type = type;
-
     }
     generateObstacle() {
-        if (this.type === "bad" ) {
+        if (this.type === "bad") {
             this.emoji = dangerousObjects[Math.ceil(Math.random() * dangerousObjects.length - 1)];
         } else {
             this.emoji = bonusObjects[Math.ceil(Math.random() * bonusObjects.length - 1)];
         }
-        this.positon = `${Math.round(Math.random() * gameWindow.width) - 35}`;
+        this.position = `${Math.round(Math.random() * gameWindow.width) - 35}`;
         this.HTMLtag = document.createElement("div");
         const tag = document.querySelector(".game-container");
         tag.appendChild(this.HTMLtag);
-        this.HTMLtag.classList.add(`${this.type}`,`obstacle`);
+        this.HTMLtag.classList.add(`${this.type}`, `obstacle`);
         this.HTMLtag.innerHTML = this.emoji;
-        this.HTMLtag.style.left = `${parseInt(this.positon) + gameWindow.x}px`
+        this.HTMLtag.style.left = `${parseInt(this.position) + gameWindow.x}px`
     }
     moveObstacle() {
         let num = 0;
         let objPositionTop
+        console.log(this.HTMLtag)
         const x = this.HTMLtag;
-        const y = this.positon;
-        this.positonY = objPositionTop
         const objType = this.type;
         const interval = setInterval(function () {
             if (play) {
@@ -158,20 +157,15 @@ class Obstacle {
                         { opacity: '100' },
                         { opacity: '0' }
                     ], {
-                            duration: 1,
-                            iterations: 1
-                        });
+                        duration: 1,
+                        iterations: 1
+                    });
                     givePoints()
-                    setTimeout(function(){x.remove()}, 400)
-                    
-                     
+                    setTimeout(function () { x.remove() }, 400)
                 }
-
+            }
         }
-
     }
-
-}
 }
 
 for (let i = 0; i < 3; i++) {
